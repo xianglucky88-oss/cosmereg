@@ -3,6 +3,8 @@ run:
 	PYTHONPATH=src:. $(PY) -m cosmereg.cli
 run_inc:
 	PYTHONPATH=src:. $(PY) -m cosmereg.cli --incremental
+report:
+	PYTHONPATH=src:. $(PY) -m cosmereg.cli --report
 test:
 	PYTHONPATH=src:. $(PY) -m pytest -q
 mock:

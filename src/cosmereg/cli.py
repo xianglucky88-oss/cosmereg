@@ -4,6 +4,10 @@ from . import pipeline
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
+    if "--report" in argv:
+        from .identity import review_report
+        print(json.dumps(review_report(), ensure_ascii=False, indent=2))
+        return
     mode = "full"
     if "--incremental" in argv:
         mode = "incremental"
